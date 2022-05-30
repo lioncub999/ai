@@ -1,0 +1,25 @@
+{% load static %}
+
+<!--섹션별 화면-->
+<section id = "home"><!--login.css-->
+    <h1>Welcome To my site</h1>
+    <p>환영해요!</p>
+    {% include "mvp\\analogclock.html" %}
+</section>
+<section id = "login">
+    <h1>Login</h1>
+    <p>로그인 페이지에요</p>
+</section>
+<section id = "about">
+    <h1>About</h1>
+    <p>Ai에 관한 사이트에요</p>
+</section>
+<section id = "contact">
+    <h1>CONTACT</h1>
+    <p>
+        연락 주세요!<br>
+        <img id = "bellowarrow" src="/static/image/bellowarrow.gif">
+    </p>
+    {% include "mvp\\circularnav.html" %}
+</section>
+

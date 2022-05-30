@@ -1,0 +1,88 @@
+.menu {
+    position : relative;
+    top : 10%;
+    width : 200px;
+    height : 200px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li{
+    position : absolute;
+    list-style: none;
+    left : 0;
+    transform-origin : 220px;
+    transition : 0.3s;
+    transition-delay : calc(0.2s * var(--i));
+    transform : rotate(0deg) translateX(-20px);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.menu.active li {
+    transform : rotate(calc(360deg / 8 * var(--i)));
+    opacity: 1;
+}
+
+.menu li #info{
+    display : flex;
+    align-items: center;
+    width : 280px;
+    height :40px;
+    background : white;
+    border-radius: 20px;
+    transform : rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0,0,0,0.5);
+    color : #111;
+    transition : 0.3s;
+    font-family: 'HSSaemaul-Regular';
+}
+.menu.active li #info{
+    pointer-events: auto;
+    cursor : pointer;
+}
+
+.menu li .icon {
+    font-size: 1.25rem;
+    padding : 0px 10px 0px 10px;
+}
+
+.menu li a{
+    font-size: 1.25rem;
+    text-decoration : none;
+}
+
+.menu li #info:hover {
+    box-shadow : 4px 8px 8px rgb(0,0,0, 0.8);
+}
+
+
+.toggle {
+    color : black;
+    position : absolute;
+    width : 60px;
+    height : 60px;
+    background : #fff;
+    display : flex;
+    justify-content:  center;
+    align-items: center;
+    z-index : 10000;
+    border-radius : 50%;
+    cursor : pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    font-size : 2em;
+    transition:2s;
+}
+
+.menu.active .toggle {
+    transform : rotate(180deg);
+}
+
+#bellowarrow {
+    width : 100px;
+    height : 100px;
+    position : relative;
+    justify-content: center;
+    align-items: center;
+}
